@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+
+<policyconfig>
+  <action id="org.freedesktop.pkexec.run-ppa-reeanabler-as-root">
+    <vendor>John A Ginis</vendor>
+    <vendor_url>https://github.com/drxspace</vendor_url>
+    <description>Run Re-enable Repositories as root</description>
+    <message>Re-enable Repositories requires admin privileges for its tasks</message>
+    <icon_name>reload</icon_name>
+
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/local/bin/ppa-reeanabler</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+</policyconfig>
