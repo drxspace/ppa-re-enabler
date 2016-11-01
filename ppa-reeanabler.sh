@@ -112,6 +112,9 @@ exlock_now || {
 # ______________________________________________________________________________
 # ------------------------------------------------------------------------------
 
+# Turns OFF the cursor
+echo -en "\e[?25l"
+
 # Silently change/update the release's codename in these lines containing
 # the string "# disabled on upgrade to <whatever>" to the current codename
 grep -lE "# disabled on upgrade to" /etc/apt/sources.list.d/*.list \
@@ -205,6 +208,9 @@ fi
 
 # Do some clean up
 rm -f /tmp/wantchk4upg.lst /tmp/wantchk4exst.lst
+
+# Turns ON the cursor
+echo -en "\e[?25h"
 
 unlock
 
