@@ -1,7 +1,7 @@
-# ppa-re-enabler
-Re-Enable working PPAs after Ubuntu upgrade
+# Re-enable/check repositories tool
+Re-Enable/check working PPAs after Ubuntu upgrade
 
-## Re-enable Repositories version 3.1.0 (20161020)
+## Re-enable Repositories version 3.1.0 (20161103)
 
 ### Install
 
